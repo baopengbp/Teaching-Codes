@@ -55,6 +55,8 @@ def get_dm(fock):
 
     return dm
 
+#dm = mf.get_init_guess(mol, mf.init_guess)
+
 dm = get_dm(hcore)
 
 scf_conv = False
@@ -63,6 +65,8 @@ cycle = 0
 
 e_tot = 0
 
+#mf_diis = mf.DIIS(mf, mf.diis_file)
+
 while not scf_conv and cycle < 50:
 
     dm_last = dm
@@ -70,6 +74,8 @@ while not scf_conv and cycle < 50:
     last_hf_e = e_tot
 
     fock = hcore + numpy.einsum('ijkl,ji->kl', eri, dm) * 2 - numpy.einsum('ijkl,jk->il', eri, dm)
+    
+    #fock = mf_diis.update(s1e, dm, fock, mf, hcore)    
 
     dm = get_dm(fock)
 

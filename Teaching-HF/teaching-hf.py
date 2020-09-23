@@ -2,6 +2,9 @@
 # Teaching-HF
 # Author: Peng Bao <baopeng@iccas.ac.cn>
 
+''' Need PySCF first,
+MKL_NUM_THREADS=16 OMP_NUM_THREADS=16 python teaching-hf.py'''
+
 import numpy
 import scipy.linalg
 from pyscf import gto, scf

@@ -1,1 +1,1 @@
-# Teaching-Codes
+Teaching-Codes for Quantum Chemistry

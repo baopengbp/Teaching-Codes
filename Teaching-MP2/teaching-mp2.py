@@ -34,4 +34,10 @@ for i in range(nocc):
                 Jintm += eri2em[i,a,j,b]*eri2em[i,a,j,b]/(orben[i]+orben[j]-orben[a+nocc]-orben[b+nocc])
                 Kintm -= eri2em[i,a,j,b]*eri2em[j,a,i,b]/(orben[i]+orben[j]-orben[a+nocc]-orben[b+nocc])
 E_corr = 2*Jintm + Kintm
-print('=========================================================\n', 'Simple MP2 ', 'E_corr = ', E_corr)
+print('=========================================================\n', 'Simple MP2 f ', 'E_corr = ', E_corr)
+
+e_i = 1 / (orben[:nocc].reshape(-1, 1, 1, 1) - orben[nocc:].reshape(1,-1, 1, 1) + orben[:nocc].reshape(1, 1, -1, 1) - orben[nocc:].reshape(1, 1, 1, -1))
+Jintm = numpy.einsum('iajb,iajb,iajb->', eri2em, eri2em, e_i)
+Kintm = -numpy.einsum('iajb,jaib,iajb->', eri2em, eri2em, e_i)
+E_corr = 2*Jintm + Kintm
+print('=========================================================\n', 'Simple MP2 v ', 'E_corr = ', E_corr)

@@ -1,1 +1,3 @@
-A simple DFT code for small system using LDA exchange and VWN correlation functionals. Need PySCF installed. 
+teaching-dft.py: A simple DFT code for small system using LDA exchange and VWN correlation functionals. 
+teaching-lda.py: A simple DFT code for small system using LDA exchange functionals.
+Need PySCF installed. 

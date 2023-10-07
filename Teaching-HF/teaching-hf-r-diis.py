@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# Teaching-HF
+# Teaching-HF-DIIS
 # Author: Peng Bao <baopeng@iccas.ac.cn>
 
 import numpy
@@ -25,7 +25,7 @@ mf.kernel()
 print('Reference HF total energy =', mf.e_tot)
 #####################################################
 
-#################### Teaching-HF ####################
+#################### Teaching-HF-DIIS ####################
 # RHF. Only need structure information of molecule and electronic integrals 
   
 #mol = gto.M(atom='H 0 0 0; F 0 0 1.1', basis='cc-pvdz')

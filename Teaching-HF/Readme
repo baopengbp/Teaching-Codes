@@ -1,4 +1,5 @@
-This is a very simple Hartree-Fork code simplified from PySCF for teaching. There is almost no comment in the code because students should put them before each line according to the content of class or some books 
+This is a very simple Hartree-Fork code simplified from PySCF for teaching. 
+There is almost no comment in the code because students should put them before each line according to the content of class or some books 
 such as Szabo, A. and Ostlund, N.S. (1996) Modern Quantum Chemistry.
 There are also DIIS and initial guess from PySCF to compare, so almost all small molecules can be compute using incore integrals.
 A bug in the file leads to energy error in each cycle, please find it and give the solution. 
